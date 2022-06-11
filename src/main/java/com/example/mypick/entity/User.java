@@ -11,6 +11,7 @@ import java.util.List;
 @Setter @Getter
 public class User {
     @Id
+    @Column(name = "USER_ID")
     private String Id;
 
     private String password;
@@ -21,18 +22,18 @@ public class User {
     private String phone;
     private boolean withdrawal;
 
-    @OneToMany(mappedBy = "user")
-    private List<Order> orders = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Order> orders = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "user")
+//    private List<DetailOrder> detailOrders = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "user")
+//    private List<Cart> carts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user")
-    private List<DetailOrder> detailOrders = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Delivery> deliveries = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user")
-    private List<Cart> carts = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user")
-    private List<Delivery> deliveries = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user")
-    private List<Review> reviews = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Review> reviews = new ArrayList<>();
 }
