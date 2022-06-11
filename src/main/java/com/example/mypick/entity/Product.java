@@ -22,16 +22,16 @@ public class Product {
     private int stock;
     private String image;
 
-//    @OneToMany(mappedBy = "product")
-//    private List<Order> orders = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "product")
-//    private List<DetailOrder> detailOrders = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "product")
-//    private List<Cart> carts = new ArrayList<>();
+    @OneToMany(mappedBy = "product")
+    private List<Order> orders = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "product")
-//    private List<Review> reviews = new ArrayList<>();
+    @OneToMany(mappedBy = "product")
+    private List<DetailOrder> detailOrders = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product")
+    private List<Cart> carts = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product")
+    private List<Review> reviews = new ArrayList<>();
 
 }
