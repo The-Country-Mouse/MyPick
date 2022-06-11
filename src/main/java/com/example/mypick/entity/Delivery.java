@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class Delivery {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "DELIVERY_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "DELIVERY_ID")
+    private int id;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "USER_ID")

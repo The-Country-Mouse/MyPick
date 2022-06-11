@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class Category {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CATE_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CATE_ID")
+    private int id;
 
     private String name;
 }

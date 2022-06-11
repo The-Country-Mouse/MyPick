@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class DetailOrder {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "DETAIL_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "DETAIL_ID")
+    private int id;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "ORDER_NUM")

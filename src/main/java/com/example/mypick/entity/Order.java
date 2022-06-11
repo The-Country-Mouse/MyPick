@@ -11,9 +11,10 @@ import java.util.List;
 @Setter @Getter
 @Table(name = "orders")
 public class Order {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ORDER_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ORDER_ID")
+    private int id;
 
     private int totalPrice;
     private String orderDate;

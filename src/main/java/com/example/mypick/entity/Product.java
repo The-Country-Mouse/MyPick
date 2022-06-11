@@ -10,9 +10,10 @@ import java.util.List;
 @Entity
 @Setter @Getter
 public class Product {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PRODUCT_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PRODUCT_ID")
+    private int id;
 
     @Column(name = "PRODUCT_NAME")
     private String name;

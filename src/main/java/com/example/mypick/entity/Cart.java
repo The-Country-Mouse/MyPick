@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class Cart {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CART_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CART_ID")
+    private int id;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "PRODUCT_NUM")

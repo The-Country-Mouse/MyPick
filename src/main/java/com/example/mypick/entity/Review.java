@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class Review {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "REVIEW_NUM")
-    private int num;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "REVIEW_ID")
+    private int id;
 
     private String content;
     private String regDate;
