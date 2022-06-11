@@ -11,7 +11,7 @@ import java.util.List;
 @Setter @Getter
 public class Product {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PRO_NUM")
+    @Column(name = "PRODUCT_NUM")
     private int num;
 
     @Column(name = "PRODUCT_NAME")
@@ -21,16 +21,16 @@ public class Product {
     private int stock;
     private String image;
 
-    @OneToMany(mappedBy = "product")
-    private List<Order> orders = new ArrayList<>();
+//    @OneToMany(mappedBy = "product")
+//    private List<Order> orders = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "product")
+//    private List<DetailOrder> detailOrders = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "product")
+//    private List<Cart> carts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "product")
-    private List<DetailOrder> detailOrders = new ArrayList<>();
-
-    @OneToMany(mappedBy = "product")
-    private List<Cart> carts = new ArrayList<>();
-
-    @OneToMany(mappedBy = "product")
-    private List<Review> reviews = new ArrayList<>();
+//    @OneToMany(mappedBy = "product")
+//    private List<Review> reviews = new ArrayList<>();
 
 }
