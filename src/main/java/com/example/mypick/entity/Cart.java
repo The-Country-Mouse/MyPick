@@ -17,9 +17,9 @@ public class Cart {
 //    @JoinColumn(name = "PRODUCT_NUM")
 //    private Product product;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "USER_ID")
-//    private User user;
+    @OneToOne()
+    @JoinColumn(name = "USER_ID")
+    private User user;
 
     private String name;
     private int price;

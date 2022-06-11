@@ -29,8 +29,8 @@ public class User {
 //    @OneToMany(mappedBy = "user")
 //    private List<DetailOrder> detailOrders = new ArrayList<>();
 //
-//    @OneToMany(mappedBy = "user")
-//    private List<Cart> carts = new ArrayList<>();
+    @OneToOne(mappedBy = "user")
+    private Cart cart;
 
 //    @OneToMany(mappedBy = "user")
 //    private List<Delivery> deliveries = new ArrayList<>();
