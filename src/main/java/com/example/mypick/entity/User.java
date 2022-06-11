@@ -23,8 +23,8 @@ public class User {
     private String phone;
     private boolean withdrawal;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Order> orders = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders = new ArrayList<>();
 //
 //    @OneToMany(mappedBy = "user")
 //    private List<DetailOrder> detailOrders = new ArrayList<>();

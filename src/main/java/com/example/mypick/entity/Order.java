@@ -19,9 +19,9 @@ public class Order {
     private int totalPrice;
     private String orderDate;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "USER_ID")
-//    private User user;
+    @ManyToOne()
+    @JoinColumn(name = "USER_ID")
+    private User user;
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "PRODUCT_NUM")
