@@ -19,7 +19,6 @@ public class Order {
     private int id;
 
     private int totalPrice;
-
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
 
@@ -30,6 +29,7 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRODUCT_ID")
     private Product product;
+
 
     @OneToMany(mappedBy = "order")
     private List<DetailOrder> detailOrders = new ArrayList<>();
