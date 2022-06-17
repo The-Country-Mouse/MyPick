@@ -20,7 +20,7 @@ public class Delivery {
 
     private String address;
 
-//    @OneToOne
-//    @JoinColumn(name = "ORDER_NUM")
-//    private Order order;
+    @OneToOne
+    @JoinColumn(name = "ORDER_ID")
+    private Order order;
 }

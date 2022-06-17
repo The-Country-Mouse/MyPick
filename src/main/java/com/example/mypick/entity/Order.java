@@ -34,6 +34,6 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<DetailOrder> detailOrders = new ArrayList<>();
 
-//    @OneToOne(mappedBy = "order")
-//    private List<Delivery> deliveries = new ArrayList<>();
+    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    private Delivery deliveries;
 }
