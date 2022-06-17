@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Setter @Getter
@@ -14,14 +15,16 @@ public class Review {
     private int id;
 
     private String content;
-    private String regDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date regDate;
     private float rating;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "PRODUCT_NUM")
-//    private Product product;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_ID")
+    private Product product;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "USER_ID")
-//    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User user;
 }

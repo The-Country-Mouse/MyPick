@@ -8,15 +8,16 @@ import javax.persistence.*;
 @Entity
 @Setter @Getter
 public class Cart {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CART_ID")
     private int id;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "PRODUCT_NUM")
-//    private Product product;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_NUM")
+    private Product product;
+  
     @OneToOne()
     @JoinColumn(name = "USER_ID")
     private User user;

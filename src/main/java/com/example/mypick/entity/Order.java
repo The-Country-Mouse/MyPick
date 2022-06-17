@@ -5,31 +5,35 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
 @Setter @Getter
 @Table(name = "orders")
 public class Order {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ORDER_ID")
     private int id;
 
     private int totalPrice;
-    private String orderDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date orderDate;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "PRODUCT_NUM")
-//    private Product product;
-//
-//    @OneToMany(mappedBy = "order")
-//    private List<DetailOrder> detailOrders = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_ID")
+    private Product product;
 
-//    @OneToOne(mappedBy = "order")
-//    private List<Delivery> deliveries = new ArrayList<>();
+
+    @OneToMany(mappedBy = "order")
+    private List<DetailOrder> detailOrders = new ArrayList<>();
+
+    @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
+    private Delivery deliveries;
 }

@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Setter @Getter
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID")
@@ -25,16 +26,16 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Order> orders = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "user")
-//    private List<DetailOrder> detailOrders = new ArrayList<>();
-//
+
+    @OneToMany(mappedBy = "user")
+    private List<DetailOrder> detailOrders = new ArrayList<>();
+
     @OneToOne(mappedBy = "user")
     private Cart cart;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Delivery> deliveries = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Delivery> deliveries = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Review> reviews = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
 }
